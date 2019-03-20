@@ -26,7 +26,7 @@ form {
     margin:auto;
 }
 .bodyLogin{
-    margin-top: -10%;
+    margin-top: 10%;
 }
 .loginBtn{
     background-color: #70005E !important;
@@ -53,8 +53,9 @@ form {
 .MuiOutlinedInput-root-229 .MuiOutlinedInput-notchedOutline-236{
     border-color: rgb(112, 0, 94) !important;
 }
-.MuiFormLabel-root-237 {
-    color: rgba(112, 0, 94, 0.84) !important
+
+.MuiFormLabel-root-222{
+    color: rgba(112, 0, 94, 0.84) !important;
 }
 .MuiAppBar-colorPrimary-12 {
     color: #fff;
@@ -66,7 +67,7 @@ form {
     min-height: 0px !important;
 }
 .loginFloat{
-    float: right;
+    padding: 10px !important;
 }
 .MuiPaper-elevation4-20{
     box-shadow: none !important;
@@ -75,5 +76,16 @@ form {
     padding-left: 24px;
     padding-right: 0 !important;
 }
+.fa-times{
+    font-size: 25px !important;
+}
+.drag{
+    -webkit-app-region: drag;
+}
+.MuiOutlinedInput-adornedEnd-233 {
+    padding-right: 0px !important;
+}
 
-
+button{
+    -webkit-app-region: no-drag !important;
+}

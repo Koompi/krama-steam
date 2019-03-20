@@ -1,42 +1,57 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import React from "react";
+import PropTypes from "prop-types";
+import TextField from "@material-ui/core/TextField";
+import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
+
+
+import InputAdornment from "@material-ui/core/InputAdornment";
+import IconButton from "@material-ui/core/IconButton";
+import Visibility from "@material-ui/icons/Visibility";
+import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import NavbarLogin from "./account/navbar";
+import classNames from "classnames";
+// const { BrowserWindow } = require('electron')
+
+// let win = new BrowserWindow({ width: 800, height: 600, frame: false })
+// win.show()
+// const electron = require("electron")
+// const app = electron.app;
+// const BrowserWindow = electron.BrowserWindow;
 
 const styles = theme => ({
   textField: {
     marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
+    marginRight: theme.spacing.unit
   },
   root: {
     flexGrow: 1,
+    backgroundColor: "red"
   },
   grow: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20,
-  },
+    marginRight: 20
+  }
 });
 
 class Login extends React.Component {
   state = {
-    name: 'Cat in the Hat',
+    name: "Cat in the Hat",
+    showPassword: false,
+    password: ""
   };
 
   handleChange = name => event => {
     this.setState({
-      [name]: event.target.value,
+      [name]: event.target.value
     });
+  };
+  handleClickShowPassword = () => {
+    this.setState(state => ({ showPassword: !state.showPassword }));
   };
 
   render() {
@@ -44,17 +59,7 @@ class Login extends React.Component {
 
     return (
       <React.Fragment>
-        {/* <div className={classes.root}> */}
-          <AppBar position="static">
-            <Toolbar>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
-            News
-          </Typography>
-              <Button color="inherit" className="loginFloat">
-                <i className="fas fa-times"></i>
-              </Button>
-            </Toolbar>
-          </AppBar>
+        <NavbarLogin />
         <div className="bodyLogin">
           <div className="container">
             <center>
@@ -76,48 +81,73 @@ class Login extends React.Component {
                     fullWidth
                     margin="normal"
                     variant="outlined"
+                    type="email"
                     autoFocus
                   />
                 </Grid>
+                
                 <Grid item xs={12} sm={12}>
-                  <TextField
-                    id="outlined-full-width"
-                    label="Password"
-                    fullWidth
-                    margin="normal"
-                    variant="outlined"
-                  />
+                <TextField
+                  id="outlined-adornment-password"
+                  // className={classNames(classes.margin, classes.textField)}  
+                  variant="outlined"
+                  type={this.state.showPassword ? "text" : "password"}
+                  label="Password"
+                  fullWidth
+                  value={this.state.password}
+                  onChange={this.handleChange("password")}
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="Toggle password visibility"
+                          onClick={this.handleClickShowPassword}
+                        >
+                          {this.state.showPassword ? (
+                            <VisibilityOff />
+                          ) : (
+                            <Visibility />
+                          )}
+                        </IconButton>
+                      </InputAdornment>
+                    )
+                  }}
+                />
                 </Grid>
                 <Grid item xs={12} sm={12}>
                   <a href="#" className="forgotAccount">
                     Forgot your account?
                   </a>
                 </Grid>
-                <br /><br />
+                <br />
+                <br />
                 <Grid item xs={12} sm={7}>
                   <Grid item xs={12} sm={6}>
                     <Link to="/register" className="forgotAccount">
                       Create Account
-                  </Link>
+                    </Link>
                   </Grid>
                 </Grid>
                 <Grid item xs={12} sm={5}>
-                  <Button variant="outlined" color="primary" className="loginBtn">
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    className="loginBtn"
+                  >
                     Login
                   </Button>
                 </Grid>
               </Grid>
             </form>
           </div>
-        </div >
+        </div>
       </React.Fragment>
-
     );
   }
 }
 
 Login.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Login);
+export default Login;

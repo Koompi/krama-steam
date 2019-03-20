@@ -17,7 +17,7 @@ function createWindow() {
           minWidth: 980,
           minHeight: 650,
           transparent: true,
-          // frame: false
+          frame: false
         });
   win.setMenu(null);
 
