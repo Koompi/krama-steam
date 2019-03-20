@@ -67,7 +67,6 @@ class Register extends React.Component {
                                 <TextField
                                     id="outlined-full-width"
                                     label="Email"
-                                    placeholder="example@gmail.com"
                                     fullWidth
                                     margin="normal"
                                     variant="outlined"
@@ -77,7 +76,6 @@ class Register extends React.Component {
                                 <TextField
                                     id="outlined-full-width"
                                     label="Password"
-                                    placeholder="*********"
                                     fullWidth
                                     margin="normal"
                                     variant="outlined"

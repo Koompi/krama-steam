@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700,700i,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 *{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 .container{
     max-width: 60%;
@@ -28,12 +28,12 @@ form {
 .bodyLogin{
     margin-top: -10%;
 }
-.MuiButton-outlinedPrimary-162{
-    background-color: #0057ff !important;
+.loginBtn{
+    background-color: #70005E !important;
     color: aliceblue !important;
-    border: 1px solid #0057ff !important;
+    border: 1px solid #70005E !important;
     float: right;
-    
+    font-weight: bold !important;
 }
 .MuiButton-label-154{
     font-weight: 600;
@@ -41,7 +41,7 @@ form {
 .forgotAccount{
     text-decoration: none;
     font-weight: 600;
-    color: #0057ff;
+    color: #70005E !important;
 }
 .kramaAccountDesc{
     font-weight: 500 !important;
@@ -50,4 +50,30 @@ form {
 .MuiFormControl-marginNormal-100{
     margin: 0px 0px !important;
 }
+.MuiOutlinedInput-root-229 .MuiOutlinedInput-notchedOutline-236{
+    border-color: rgb(112, 0, 94) !important;
+}
+.MuiFormLabel-root-237 {
+    color: rgba(112, 0, 94, 0.84) !important
+}
+.MuiAppBar-colorPrimary-12 {
+    color: #fff;
+    background-color: #720460 !important;
+    position: fixed !important;
+    top: 0 !important;
+}
+.MuiToolbar-regular-43 {
+    min-height: 0px !important;
+}
+.loginFloat{
+    float: right;
+}
+.MuiPaper-elevation4-20{
+    box-shadow: none !important;
+}
+.MuiToolbar-gutters-42 {
+    padding-left: 24px;
+    padding-right: 0 !important;
+}
+
 
