@@ -5,20 +5,11 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 
-
 import InputAdornment from "@material-ui/core/InputAdornment";
 import IconButton from "@material-ui/core/IconButton";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import NavbarLogin from "./account/navbar";
-import classNames from "classnames";
-// const { BrowserWindow } = require('electron')
-
-// let win = new BrowserWindow({ width: 800, height: 600, frame: false })
-// win.show()
-// const electron = require("electron")
-// const app = electron.app;
-// const BrowserWindow = electron.BrowserWindow;
 
 const styles = theme => ({
   textField: {
@@ -85,34 +76,33 @@ class Login extends React.Component {
                     autoFocus
                   />
                 </Grid>
-                
+
                 <Grid item xs={12} sm={12}>
-                <TextField
-                  id="outlined-adornment-password"
-                  // className={classNames(classes.margin, classes.textField)}  
-                  variant="outlined"
-                  type={this.state.showPassword ? "text" : "password"}
-                  label="Password"
-                  fullWidth
-                  value={this.state.password}
-                  onChange={this.handleChange("password")}
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        <IconButton
-                          aria-label="Toggle password visibility"
-                          onClick={this.handleClickShowPassword}
-                        >
-                          {this.state.showPassword ? (
-                            <VisibilityOff />
-                          ) : (
-                            <Visibility />
-                          )}
-                        </IconButton>
-                      </InputAdornment>
-                    )
-                  }}
-                />
+                  <TextField
+                    id="outlined-adornment-password"
+                    variant="outlined"
+                    type={this.state.showPassword ? "text" : "password"}
+                    label="Password"
+                    fullWidth
+                    value={this.state.password}
+                    onChange={this.handleChange("password")}
+                    InputProps={{
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <IconButton
+                            aria-label="Toggle password visibility"
+                            onClick={this.handleClickShowPassword}
+                          >
+                            {this.state.showPassword ? (
+                              <VisibilityOff />
+                            ) : (
+                              <Visibility />
+                            )}
+                          </IconButton>
+                        </InputAdornment>
+                      )
+                    }}
+                  />
                 </Grid>
                 <Grid item xs={12} sm={12}>
                   <a href="#" className="forgotAccount">

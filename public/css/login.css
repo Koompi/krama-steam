@@ -1,91 +1,104 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
-*{
-    font-family: 'Open Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800");
+* {
+  font-family: "Open Sans", sans-serif;
 }
-.container{
-    max-width: 60%;
-    margin: 0px auto;
+.container {
+  max-width: 60%;
+  margin: 0px auto;
 }
-body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display:table;
-    /* background-image: url("../img/background-learning.jpg"), linear-gradient(#eb01a5, #d13531); W3C */
-    background-color: #EAEBED;
-    /* background-size: cover; */
-    /* color: #fff; */
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: table;
+  /* background-image: url("../img/background-learning.jpg"), linear-gradient(#eb01a5, #d13531); W3C */
+  background-color: #eaebed;
+  /* background-size: cover; */
+  /* color: #fff; */
 }
 body {
-    display:table-cell;
-    vertical-align:middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 form {
-    display:table;/* shrinks to fit conntent */
-    margin:auto;
+  display: table; /* shrinks to fit conntent */
+  margin: auto;
 }
-.bodyLogin{
-    margin-top: 10%;
+.bodyLogin {
+  margin-top: 0% !important;
 }
-.loginBtn{
-    background-color: #70005E !important;
-    color: aliceblue !important;
-    border: 1px solid #70005E !important;
-    float: right;
-    font-weight: bold !important;
+.loginBtn {
+  background-color: #282e33 !important;
+  color: aliceblue !important;
+  border: 1px solid #282e33 !important;
+  float: right;
+  font-weight: bold !important;
 }
-.MuiButton-label-154{
-    font-weight: 600;
+.MuiButton-label-154 {
+  font-weight: 600;
 }
-.forgotAccount{
-    text-decoration: none;
-    font-weight: 600;
-    color: #70005E !important;
+.forgotAccount {
+  text-decoration: none;
+  font-weight: 600;
+  color: #282e33 !important;
 }
-.kramaAccountDesc{
-    font-weight: 500 !important;
-    font-size: 20px;
+.kramaAccountDesc {
+  font-weight: 500 !important;
+  font-size: 20px;
 }
-.MuiFormControl-marginNormal-100{
-    margin: 0px 0px !important;
+.MuiFormControl-marginNormal-100 {
+  margin: 0px 0px !important;
 }
-.MuiOutlinedInput-root-229 .MuiOutlinedInput-notchedOutline-236{
-    border-color: rgb(112, 0, 94) !important;
+.MuiOutlinedInput-root-229 .MuiOutlinedInput-notchedOutline-236 {
+  border-color: #282e33 !important;
 }
 
-.MuiFormLabel-root-222{
-    color: rgba(112, 0, 94, 0.84) !important;
+.MuiFormLabel-root-222 {
+  color: #282e33 !important;
 }
 .MuiAppBar-colorPrimary-12 {
-    color: #fff;
-    background-color: #720460 !important;
-    position: fixed !important;
-    top: 0 !important;
+  color: #fff;
+  background-color: #282e33 !important;
+  position: fixed !important;
+  top: 0 !important;
 }
 .MuiToolbar-regular-43 {
-    min-height: 0px !important;
+  min-height: 0px !important;
 }
-.loginFloat{
-    padding: 10px !important;
+.loginFloat {
+  padding: 5px 0px !important;
 }
-.MuiPaper-elevation4-20{
-    box-shadow: none !important;
+.MuiPaper-elevation4-20 {
+  box-shadow: none !important;
 }
 .MuiToolbar-gutters-42 {
-    padding-left: 24px;
-    padding-right: 0 !important;
+  padding-left: 24px;
+  padding-right: 0 !important;
 }
-.fa-times{
-    font-size: 25px !important;
+.fa-times {
+  font-size: 25px !important;
 }
-.drag{
-    -webkit-app-region: drag;
+.drag {
+  -webkit-app-region: drag;
 }
 .MuiOutlinedInput-adornedEnd-233 {
-    padding-right: 0px !important;
+  padding-right: 0px !important;
 }
-
-button{
-    -webkit-app-region: no-drag !important;
+button {
+  -webkit-app-region: no-drag !important;
+}
+.koompiImage {
+  height: 25px;
+  position: relative;
+  top: 5px;
+}
+.closeBtn {
+  border-radius: 0px !important;
+}
+.closeBtn:hover {
+  background-color: #d22c0c !important;
+  transition: 0.2s !important;
+  border-radius: 0 !important;
 }

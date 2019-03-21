@@ -28,8 +28,11 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "electron": "^4.0.8",
+    "electron": "^4.1.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "node-sass": "^4.11.0",
+    "prettier": "^1.16.4",
     "sass-loader": "^7.1.0"
   }
 }
