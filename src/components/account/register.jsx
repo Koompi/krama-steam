@@ -9,27 +9,12 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import IconButton from "@material-ui/core/IconButton";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import NavbarLogin from "./account/navbar";
+// import NavbarLogin from "./account/navbar";
 
-const styles = theme => ({
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit
-  },
-  root: {
-    flexGrow: 1,
-    backgroundColor: "red"
-  },
-  grow: {
-    flexGrow: 1
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20
-  }
-});
+// Import CSS in ReactJS
+import "./login.css";
 
-class Login extends React.Component {
+class Register extends React.Component {
   state = {
     name: "Cat in the Hat",
     showPassword: false,
@@ -46,16 +31,18 @@ class Login extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    // const { classes } = this.props;
 
     return (
       <React.Fragment>
-        <NavbarLogin />
+        {/* <NavbarLogin /> */}
         <div className="bodyLogin">
           <div className="container">
             <center>
-              <h1>Sign in</h1>
-              <p className="kramaAccountDesc">Use you KRAMA STEAM Account</p>
+              <h1>Register</h1>
+              <p className="kramaAccountDesc">
+                Create your KRAMA STEAM Account
+              </p>
             </center>
             <form>
               <Grid
@@ -64,7 +51,29 @@ class Login extends React.Component {
                 justify="center"
                 alignItems="center"
                 spacing={16}
+                autoFocus
               >
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    id="outlined-full-width"
+                    label="First Name"
+                    // placeholder="koompi"
+                    fullWidth
+                    autoFocus
+                    margin="normal"
+                    variant="outlined"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    id="outlined-full-width"
+                    label="Last Name"
+                    // placeholder="krama"
+                    fullWidth
+                    margin="normal"
+                    variant="outlined"
+                  />
+                </Grid>
                 <Grid item xs={12} sm={12}>
                   <TextField
                     id="outlined-full-width inputBorder"
@@ -73,7 +82,6 @@ class Login extends React.Component {
                     margin="normal"
                     variant="outlined"
                     type="email"
-                    autoFocus
                   />
                 </Grid>
 
@@ -105,16 +113,14 @@ class Login extends React.Component {
                   />
                 </Grid>
                 <Grid item xs={12} sm={12}>
-                  <a href="#" className="forgotAccount">
-                    Forgot your account?
-                  </a>
+                  <p>Have account?</p>
                 </Grid>
                 <br />
                 <br />
                 <Grid item xs={12} sm={7}>
                   <Grid item xs={12} sm={6}>
-                    <Link to="/register" className="forgotAccount">
-                      Create Account
+                    <Link to="/login" className="forgotAccount">
+                      Login
                     </Link>
                   </Grid>
                 </Grid>
@@ -124,7 +130,7 @@ class Login extends React.Component {
                     color="primary"
                     className="loginBtn"
                   >
-                    Login
+                    Register
                   </Button>
                 </Grid>
               </Grid>
@@ -136,8 +142,8 @@ class Login extends React.Component {
   }
 }
 
-Login.propTypes = {
+Register.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default Login;
+export default Register;

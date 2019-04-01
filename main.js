@@ -1,30 +1,34 @@
 const electron = require("electron");
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-const Menu = electron.Menu;
-var path = require("path");
 
 let win = null;
 
 function createWindow() {
-  // Initialize the window to our specified dimensions
-
   win = new BrowserWindow({
     width: 980,
     height: 600,
     minWidth: 980,
     minHeight: 650,
-    transparent: true,
-    frame: false
+    transparent: true
+    // frame: false
   });
   win.setMenu(null);
+  win.minimize();
 
   // Specify entry point
   win.loadURL("http://localhost:3000");
+  // win.loadURL(
+  //   url.format({
+  //     pathname: path.join(__dirname, "public/index.html"),
+  //     protocol: "file",
+  //     slashes: true
+  //   })
+  // );
 
   // Show dev tools
   // Remove this line before distributing
-  // win.webContents.openDevTools()
+  win.webContents.openDevTools();
 
   // Remove window once app is closed
   // win.on("closed", function() {
@@ -43,7 +47,7 @@ app.on("activate", () => {
 });
 
 app.on("window-all-closed", function() {
-  if (process.platform != "darwin") {
+  if (process.platform !== "darwin") {
     app.quit();
   }
 });

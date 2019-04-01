@@ -51,11 +51,11 @@ form {
 .MuiFormControl-marginNormal-100 {
   margin: 0px 0px !important;
 }
-.MuiOutlinedInput-root-229 .MuiOutlinedInput-notchedOutline-236 {
+.MuiOutlinedInput-root-120 .MuiOutlinedInput-notchedOutline-127 {
   border-color: #282e33 !important;
 }
 
-.MuiFormLabel-root-222 {
+.MuiFormLabel-root-113 {
   color: #282e33 !important;
 }
 .MuiAppBar-colorPrimary-12 {
@@ -83,7 +83,7 @@ form {
 .drag {
   -webkit-app-region: drag;
 }
-.MuiOutlinedInput-adornedEnd-233 {
+.MuiOutlinedInput-adornedEnd-124 {
   padding-right: 0px !important;
 }
 button {

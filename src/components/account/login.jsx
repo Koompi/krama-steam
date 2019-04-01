@@ -1,4 +1,5 @@
 import React from "react";
+
 import PropTypes from "prop-types";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
@@ -9,9 +10,27 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import IconButton from "@material-ui/core/IconButton";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import NavbarLogin from "./account/navbar";
+// import NavbarLogin from "./account/navbar";
 
-class Register extends React.Component {
+const styles = theme => ({
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit
+  },
+  root: {
+    flexGrow: 1,
+    backgroundColor: "red"
+  },
+  grow: {
+    flexGrow: 1
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20
+  }
+});
+
+class Login extends React.Component {
   state = {
     name: "Cat in the Hat",
     showPassword: false,
@@ -32,14 +51,12 @@ class Register extends React.Component {
 
     return (
       <React.Fragment>
-        <NavbarLogin />
+        {/* <NavbarLogin /> */}
         <div className="bodyLogin">
           <div className="container">
             <center>
-              <h1>Register</h1>
-              <p className="kramaAccountDesc">
-                Create your KRAMA STEAM Account
-              </p>
+              <h1>Sign in</h1>
+              <p className="kramaAccountDesc">Use you KRAMA STEAM Account</p>
             </center>
             <form>
               <Grid
@@ -48,29 +65,7 @@ class Register extends React.Component {
                 justify="center"
                 alignItems="center"
                 spacing={16}
-                autoFocus
               >
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    id="outlined-full-width"
-                    label="First Name"
-                    // placeholder="koompi"
-                    fullWidth
-                    autoFocus
-                    margin="normal"
-                    variant="outlined"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    id="outlined-full-width"
-                    label="Last Name"
-                    // placeholder="krama"
-                    fullWidth
-                    margin="normal"
-                    variant="outlined"
-                  />
-                </Grid>
                 <Grid item xs={12} sm={12}>
                   <TextField
                     id="outlined-full-width inputBorder"
@@ -79,6 +74,7 @@ class Register extends React.Component {
                     margin="normal"
                     variant="outlined"
                     type="email"
+                    autoFocus
                   />
                 </Grid>
 
@@ -110,14 +106,16 @@ class Register extends React.Component {
                   />
                 </Grid>
                 <Grid item xs={12} sm={12}>
-                  <p>Have account?</p>
+                  <a href="#" className="forgotAccount">
+                    Forgot your account?
+                  </a>
                 </Grid>
                 <br />
                 <br />
                 <Grid item xs={12} sm={7}>
                   <Grid item xs={12} sm={6}>
-                    <Link to="/login" className="forgotAccount">
-                      Login
+                    <Link to="/register" className="forgotAccount">
+                      Create Account
                     </Link>
                   </Grid>
                 </Grid>
@@ -127,7 +125,7 @@ class Register extends React.Component {
                     color="primary"
                     className="loginBtn"
                   >
-                    Register
+                    Login
                   </Button>
                 </Grid>
               </Grid>
@@ -139,8 +137,8 @@ class Register extends React.Component {
   }
 }
 
-Register.propTypes = {
+Login.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default Register;
+export default Login;
