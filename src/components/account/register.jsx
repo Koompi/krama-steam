@@ -12,7 +12,8 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 // import NavbarLogin from "./account/navbar";
 
 // Import CSS in ReactJS
-import "./login.css";
+// import "./login.css";
+import { Helmet } from "react-helmet";
 
 class Register extends React.Component {
   state = {
@@ -35,6 +36,9 @@ class Register extends React.Component {
 
     return (
       <React.Fragment>
+        <Helmet>
+          <link rel="stylesheet" href="/css/login.css" />
+        </Helmet>
         {/* <NavbarLogin /> */}
         <div className="bodyLogin">
           <div className="container">
