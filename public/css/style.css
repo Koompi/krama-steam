@@ -14,9 +14,19 @@
 .Navbar-toolbar-6 {
   min-height: 0px;
 }
-.MuiTypography-subheading-54 {
-  color: #fff;
+.MuiTypography-subheading {
+  color: #fff !important;
+  margin: 0px !important;
+  position: relative;
+  top: 4px;
+  left: 10px;
+  font-weight: 600;
 }
 .Navbar-drawerPaper-4 {
   background-color: #101d29;
+}
+.btnPadding {
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-top: 0px;
 }
